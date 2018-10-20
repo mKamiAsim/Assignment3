@@ -1,0 +1,15 @@
+﻿CREATE TABLE dbo.USERS
+	(
+	UserId int NOT NULL,
+	UserName varchar(20) NULL,
+	DepartmentCode int NULL,
+	FullName varchar(100) NULL,
+	IsActive bit NULL,
+	CreationDate date NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.USERS ADD CONSTRAINT
+	PK_Table_1 PRIMARY KEY CLUSTERED 
+	(
+	UserId
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
